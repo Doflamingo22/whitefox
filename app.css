@@ -76,16 +76,14 @@ a:hover{
 	color:#8f848f;
 	margin-bottom:20px
 }
-.tab{
-	padding-top:20px
-}
 .tab .tab-content{
 	padding-top:20px;
 	text-align:justify;
 	overflow:hidden
 }
 .tab .tab-header{
-	list-style:none
+	text-align: center;
+        list-style: none;
 }
 .tab .tab-header li{
 	display:inline-block;
@@ -102,21 +100,14 @@ a:hover{
 	transition:all .2s ease-in
 }
 .tab .tab-header li:after{
-	content:"";
-	position:absolute;
-	bottom:-15px;
-	left:20%;
-	width:60%;
-	height:4px;
-	background:#7f56e3;
-	-webkit-border-radius:2px;
-	-moz-border-radius:2px;
-	-ms-border-radius:2px;
-	-o-border-radius:2px;
-	border-radius:2px;
-	-webkit-box-shadow:0 2px 20px rgba(74,67,80,.9);
-	box-shadow:0 2px 20px rgba(74,67,80,.9);
-	opacity:0
+	content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0%;
+    width: 100%;
+    height: 4px;
+    background: #0000004d;
+    opacity: 0;
 }
 .tab .tab-header li.active,.tab .tab-header li:hover{
 	color:#7f56e3
@@ -1100,19 +1091,19 @@ a:hover{
 .post-detail{
 	max-width:100%;
 	width:940px;
-	margin:20px auto 0;
-	padding-top:130px
+	margin:0px auto 0;
 }
 .post-detail .episode-container{
-	padding-top:20px;
-	display:flex;
-	flex-wrap:wrap
+	    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
 }
 .post-detail .episode-container .episode-anime{
 	font-size:18px;
-	background:#7f56e3;
+	background:#6c6c6c;
 	color:#fff;
-	border-radius:3px;
+	border-radius:5px;
 	margin:0 10px 10px;
 	cursor:pointer;
 	text-align:center
@@ -1125,7 +1116,7 @@ a:hover{
 	line-height:40px
 }
 .post-detail .episode-container .episode-anime:hover{
-	background:rgba(127,86,227,.8)
+	background:#000;
 }
 .post-detail .episode-container .episode-anime:last-child{
 	border-bottom:1px solid hsla(300,5%,54%,.1)
@@ -1171,46 +1162,24 @@ a:hover{
 }
 .post-detail .post-detail-box{
 	background:#fff;
-	padding:20px
-}
-.post-detail .post-detail-box,.post-detail .post-detail-box .post-video{
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	-ms-border-radius:10px;
-	-o-border-radius:10px;
-	border-radius:10px
 }
 .post-detail .post-detail-box .post-video{
 	background:#8f848f;
 	width:100%;
-	min-height:360px;
-	margin-bottom:20px;
+        z-index: 5;
+        position: relative;
+        padding-bottom: 56.3%;
+        height: 0;
+        width: 100%;
 	position:relative;
-	margin-top:-150px;
-	-webkit-box-shadow:0 5px 30px rgba(74,67,80,.2);
-	box-shadow:0 5px 30px rgba(74,67,80,.2);
 	overflow:hidden
 }
-@media (max-width:1024px){
-	.post-detail .post-detail-box .post-video{
-		min-height:0
-}
-}
-.post-detail .post-detail-box .post-desc *{
-	vertical-align:middle
+.post-detail .post-detail-box .post-desc {
+	text-align: center;
+        padding: 15px;
 }
 .post-detail .post-detail-box .post-desc .post-small-thumbnail{
-	display:inline-block;
-	height:72px;
-	width:72px;
-	overflow:hidden;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	-ms-border-radius:5px;
-	-o-border-radius:5px;
-	border-radius:5px;
-	-webkit-box-shadow:0 2px 15px rgba(74,67,80,.5);
-	box-shadow:0 2px 15px rgba(74,67,80,.5)
+	display:none;
 }
 .post-detail .post-detail-box .post-desc .post-small-thumbnail img{
 	width:72px
@@ -1238,31 +1207,15 @@ a:hover{
 	width:100%;
 	padding:0
 }
-.video iframe{
-	border:none;
-	border-radius:5px;
-	overflow:hidden;
-	margin:0;
-	width:100%;
-	height:480px
+.video iframe, .video video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .video iframe .drive-viewer-button{
 	display:none!important
-}
-@media (max-width:756px){
-	.video iframe{
-		height:330px!important
-}
-}
-@media (max-width:556px){
-	.video iframe{
-		height:230px!important
-}
-}
-@media (max-width:356px){
-	.video iframe{
-		height:130px!important
-}
 }
 .loading{
 	background:#b4a4c7;
